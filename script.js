@@ -22,7 +22,6 @@ function clock() {
       document.getElementById("clock").innerHTML = x;
     }
     if (gameOver) {
-      document.getElementById("result").innerHTML = "😭Thua rồi!😭";
       clearInterval(intervalId);
     }
 }, 1000);
