@@ -1,0 +1,199 @@
+/*Định dạng style cho các thẻ gốc của html*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  height: 40px;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+header {
+  color: rgb(191, 218, 255);
+  text-shadow: 5px 5px 5px black;
+  width: 100%;
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+  line-height: 7vh;
+  height: 7vh;
+  background-image: url("./GameAssets/headerbg.png");
+  background-size: 25%;
+}
+
+footer {
+  width: 100%;
+  height: 3vh;
+  line-height: 3vh;
+  color: white;
+  text-align: center;
+  background-color: brown;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 4px;
+}
+
+/*Định dạng style cho phần thân của web, bao gồm trái, phải và phần chứa game*/
+
+.body {
+  display: flex;
+  flex-direction: row;
+  background-image: url("./GameAssets/bodybg.png");
+  background-repeat: repeat-x;
+  background-size: cover;
+  height: 90vh;
+}
+
+.left {
+  width: 25%;
+  border: 1px solid none;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(207, 245, 255, 0.7);
+  border-radius: 10px;
+}
+
+.game {
+  width: 50%;
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.right {
+  width: 25%;
+  border: 1px solid none;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(207, 245, 255, 0.7);
+  border-radius: 10px;
+}
+
+/*Định dạng style cho các phần tử của game*/
+
+#board /*Khung chứa các ô*/
+{
+  width: 510px;
+  height: 510px;
+  background-color: white;
+  border: 5px solid rgba(146, 60, 60, 0.74);
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#board div /*Các ô vuông*/
+{
+  width: 100%;
+  height: 100%;
+  border: 1px solid green;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100%;
+  margin: 0px;
+}
+
+#flag, #result{
+  margin: 5px;;
+}
+
+#flag /*Khung chứa số lượng cờ hiện có*/
+{
+  background-color: rgb(254, 176, 255);
+  height: 50px;
+  width: 96%;
+  font-size: 2em;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  border: 3px solid rgb(189, 89, 190);
+}
+
+#result /*Khung trạng thái thông báo*/
+{
+  background-color: lightblue;
+  height: 50px;
+  width: 96%;
+  font-size: 1.5em;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  border: 3px solid rgb(89, 158, 180);
+}
+
+#timer /*Khung thời gian hiện hành*/
+{
+  background-color: rgb(170, 255, 148);
+  height: 50px;
+  width: 21%;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 6%;
+}
+
+.valid,
+.bomb /*Ô trống và ô chứa bom*/
+{
+  background-color: rgb(255, 255, 133);
+}
+
+.boom /*Ô chứa bom đã được mở*/
+{
+  background-image: url("./GameAssets/bomb.png");
+  background-size: 100%;
+}
+
+.checked /*Ô đã được mở*/
+{
+  background-color: white;
+}
+
+.flaged /*Ô đã được gắn cờ*/
+{
+  background-image: url("./GameAssets/flag.png");
+  background-size: 100%;
+}
+
+/*Định dạng màu sắc cho các chữ số gần bom*/
+.one {
+  color: blue;
+}
+
+.two {
+  color: green;
+}
+
+.three {
+  color: orange;
+}
+
+.four {
+  color: red;
+}
+
+.five {
+  color: purple;
+}
+
+.six {
+  color: aqua;
+}
+
+.seven {
+  color: chocolate;
+}
+
+.eight {
+  color: darkred;
+}

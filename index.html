@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./GameAssets/bomb.png">
+    <title>Minesweeper Game - Marcoh05P</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <header>💣 MineSweeper Game 💣</header>
+    <div class="body">
+      <div class="left">
+        <h2>💣MineSweeper Game💣</h2>
+        <b>Thông tin chi tiết game:</b>
+        <br>Tên game: MineSweeper (Dò mìn cổ điển) <br />Tương thích phù hợp
+        với màn hình 1920x1080 (16:9)
+        <br><b>Hướng dẫn chơi game:</b>
+        <br>Chọn cấp độ bạn muốn chơi.
+        <br>Click chuột trái để mở ô.
+        <br>Click chuột phải để đặt cờ, đánh dấu ô đó nghi ngờ có bom.
+        <br>Tại ô được mở, nếu có một con số thì con số đó đại diện số quả bom nằm trong 8 ô xung quanh nó. <br>Bạn sẽ thắng khi đặt cờ hết tất cả các ô nghi ngờ có bom mà không làm nổ bom, chúc bạn may mắn!😊
+        <br><b>Thông số cấp độ:</b>
+        <br>Dễ: 9x9, 10 quả bom
+        <br>Trung bình: 16x16, 45 quả bom
+        <br>Khó: 25x25, 100 quả bom
+        <br><b>Nguồn tham khảo:</b>
+        <br>Giáo trình Ứng Dụng Web - Cô Mai Trang
+        <br>Video: <a href="https://youtu.be/jS7iB9mRvcc?feature=shared" target="_blank">I code Minesweeper in JavaScript! - Ania Kubów</a>
+        <br>Website: <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+        <br>Website: <a href="https://www.geeksforgeeks.org/" target="_blank">GeeksforGeeks</a>
+        <br>ChatGPT-4o: Kiểm tra lỗi logic và gợi ý hàm phù hợp.
+      </div>
+      <div class="game">
+        <div id="board"></div>
+      </div>
+      <div class="right">
+        <h2>Bảng điều hướng game:</h2>
+        <h3>Cấp độ game:</h3>
+        <img src="./GameAssets/easylevel.png" onclick="createEasyLevel()" />
+        <img src="./GameAssets/mediumlevel.png" onclick="createMediumLevel()" />
+        <img src="./GameAssets/hardlevel.png" onclick="createHardLevel()" />
+        <br />
+        <h3>Chức năng game:</h3>
+        <img src="./GameAssets/reset.png" onclick="reset()" />
+        <h3>Trạng thái game:</h3>
+        <div id="result">🥳Chào mừng!🥳</div>
+        <div id="flag">🚩: <span id="flag_left">0</span></div>
+
+        <div id ="timer"><span id = "clock">00:00</span></div>
+      </div>
+    </div>
+    <footer>Hoàng Phi Hùng - 2351010082</footer>
+  </body>
+</html>
