@@ -277,16 +277,16 @@ function addFlag(square) //Hàm xử lý khi click chuột phải  vào ô (Hàm
 {
   if (gameOver || square.classList.contains("checked")) return;
 
-  if (flags < bomb) //Ngăn chặn việc đặt cờ nhiều hơn số bom
+  if (flags <= bomb) //Ngăn chặn việc đặt cờ nhiều hơn số bom
   {
-    if (!square.classList.contains("flaged")) //Gắn cờ nếu chưa đánh dấu
+    if (!square.classList.contains("flaged") && flags < bomb) //Gắn cờ nếu chưa đánh dấu
     {
       square.classList.add("flaged");
       flags++;
       document.getElementById("flag_left").innerHTML = bomb - flags;
       checkForWin(); //Kiểm tra điều kiện thắng
     }
-    else //Thu hồi lại cờ đã đánh dấu
+    else if(square.classList.contains("flaged")) //Thu hồi lại cờ đã đánh dấu
     {
       square.classList.remove("flaged");
       flags--;
